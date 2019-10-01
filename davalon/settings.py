@@ -19,19 +19,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'kz@sdqqu+6fsd@@0s-w7p#h0y05wmsl8xp#*a-!0bi_-byb5ft'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
 SLACK_CLIENT_ID = '238310915623.756720773443'
-SLACK_CLIENT_SECRET = '2e076b84ed72f20179637603f43063c2'
-SLACK_VERIFICATION_TOKEN = 'fANu7yDAkSWvTxP89CwBvE5B'
-SLACK_BOT_USER_TOKEN = 'xoxb-238310915623-761825653777-hDDCsnEXfAnTdHGJUOCDwFSN'
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -134,3 +127,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+from .local_settings import *
