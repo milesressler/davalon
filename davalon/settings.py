@@ -19,6 +19,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
+SLACK_CLIENT_SECRET = os.environ.get('SLACK_CLIENT_SECRET', "")
+SLACK_VERIFICATION_TOKEN = os.environ.get('SLACK_VERIFICATION_TOKEN', "")
+SLACK_BOT_USER_TOKEN = os.environ.get('SLACK_BOT_USER_TOKEN', "")
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', "")
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
