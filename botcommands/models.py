@@ -1,6 +1,7 @@
 import math
 from enum import Enum
 from collections import namedtuple
+from django.conf import settings
 
 
 Char = namedtuple('Char', ['id', 'name', 'team'])
@@ -80,7 +81,7 @@ class User:
 
 
 class Game:
-    debug = True
+    debug = getattr(settings, 'DEBUG', False)
     admin_user = None
     slack_message_ts = None
 
