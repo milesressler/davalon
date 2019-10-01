@@ -1,0 +1,6 @@
+Django==2.2.5
+djangorestframework==3.8.2
+slackclient==2.1.0
+slackeventsapi==2.1.0
+python-dateutil==2.7.3
+python3-memcached==1.51

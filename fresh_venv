@@ -1,0 +1,8 @@
+#! /bin/bash
+# Run this in the current directory to set up a fresh venv
+# if sourced, will also activate the venv if successful
+
+virtualenv -p python3 env &&
+env/bin/pip install -U pip &&
+env/bin/pip install -r requirements.txt &&
+. env/bin/activate
