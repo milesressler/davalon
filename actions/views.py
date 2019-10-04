@@ -35,9 +35,9 @@ class Actions(APIView):
 
                 action_id = data.action_id
                 username = (game.admin_user or data.user.name) if game.debug else data.user.name
-                if action_id == 'join_game_lobby':
+                if action_id == 'action_join_game_lobby':
                     self.join_lobby(username, data.user.id, game)
-                elif action_id == 'exit_game_lobby':
+                elif action_id == 'action_exit_game_lobby':
                     self.exit_lobby(username, game)
                 elif action_id == 'start_game':
                     self.start_game(game)

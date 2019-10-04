@@ -95,8 +95,8 @@ def get_lobby_block_content(game):
                         "text": "Join Lobby",
                         "emoji": True
                     },
-                    "action_id": "join_game_lobby",
-                    "value": "join_game_lobby"
+                    "action_id": "action_join_game_lobby",
+                    "value": "action_join_game_lobby"
                 },
                 {
                     "type": "button",
@@ -105,8 +105,8 @@ def get_lobby_block_content(game):
                         "text": "Exit Lobby",
                         "emoji": True
                     },
-                    "action_id": "exit_game_lobby",
-                    "value": "exit_game_lobby"
+                    "action_id": "action_exit_game_lobby",
+                    "value": "action_exit_game_lobby"
                 },
                 {
                     "type": "button",
