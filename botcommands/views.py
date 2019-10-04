@@ -59,19 +59,11 @@ def get_lobby_block_content(game):
             "fields": [
                 {
                     "type": "mrkdwn",
-                    "text": "*Players*"
+                    "text": "*Players*\n"+players
                 },
                 {
                     "type": "mrkdwn",
-                    "text": "*Characters*"
-                },
-                {
-                    "type": "mrkdwn",
-                    "text": players,
-                },
-                {
-                    "type": "mrkdwn",
-                    "text": characters,
+                    "text": "*Characters*\n"+characters
                 }
             ]
         },
@@ -149,14 +141,14 @@ class BotCommands(APIView):
         channel = data.get('channel_id')
         user = data.get('user_name')
         user_id = data.get('user_id')
-        message = 'DAvalon game lobby is open!'
+        message = 'DAvalot lobby is open!'
         forced = False
         if 'text' in data:
             forced = data['text'].lower() == 'force'
 
         current_game = caches['default'].get(channel)
         if current_game and not forced:
-            Client.chat_postMessage(channel=channel, text="Use `/davalon force` to cancel existing game")
+            # Client.chat_postMessage(channel=channel, text="Use `/davalot force` to cancel existing session")
             return True
 
         # check for existing game

@@ -26,7 +26,8 @@ class Actions(APIView):
             channel = data.channel.id
             game = caches['default'].get(channel)
             if not game:
-                Client.chat_postMessage(channel=channel, text="Can't find game?!?!")
+                # Client.chat_postMessage(channel=channel, text="Can't find game?!?!")
+                game = None
 
             else:
                 game.player_list = game.player_list
